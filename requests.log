@@ -1,0 +1,4 @@
+format 'the server is working properly' -> 'the server is working properly'
+format 'I send "{value}" as "{parameter}" to "{page}"' -> 'I send "(?P<value>.+?)" as "(?P<parameter>.+?)" to "(?P<page>.+?)"'
+format 'the page should visualize "{oracle}"' -> 'the page should visualize "(?P<oracle>.+?)"'
+format 'the page should not visualize "{oracle}"' -> 'the page should not visualize "(?P<oracle>.+?)"'
