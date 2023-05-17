@@ -74,3 +74,4 @@ def step_page_functional_visualization(context, oracle):
 @then('the page should not visualize "{oracle}"')
 def step_page_security_visualization(context, oracle):
     assert not oracle in context.response, f"Expected '{oracle}' to not be visualized"
+    # if test not passed use also selenium to check that it works also rendering
