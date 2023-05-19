@@ -1,3 +1,5 @@
+<style> .test {  color: blue; } </style>
+
 <?php
 
 $name = $_GET['name'];

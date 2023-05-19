@@ -6,9 +6,10 @@ Feature: Security Testing
     Scenario Outline: Testing if <page> is secure, also from rendering
         Given the server is working properly
         When I send "<value>" as "<parameter>" to "<page>"
-        Then the page should not has the content "<oracle>"
-         And the page should not render "<oracle>"
+        Then the page should not visualize "<oracle>"
 
-    # TODO: change value and oracle to inject
-    Examples: Rendered Pages
-    | page                          | parameter     | value     | oracle    |
+    Examples: Simple Echo
+    | page                          | parameter     | value                          | oracle   |
+    | echo.php                      | name          | <script>alert(42)</script>     | alert    |
+    | echo-name.php                 | name          | <script>alert(42)</script>     | alert    |
+    | echo-name-protected.php       | name          | <script>alert(42)</script>     | alert    |

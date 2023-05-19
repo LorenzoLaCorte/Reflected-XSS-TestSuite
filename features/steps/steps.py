@@ -5,7 +5,13 @@ import requests
 from logging import getLogger, FileHandler, DEBUG
 import os
 
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
+
 NEW_LOG_EACH_RUN = True
+SEC_TO_WAIT = 2
 
 def getMyLogger(log_file):
     if os.path.isfile(log_file) and NEW_LOG_EACH_RUN: 
@@ -49,6 +55,28 @@ def send_request(port, target, params, method) -> str:
     myLogger.debug(f"Result is: {response.text}\n")
     return response.text
 
+def is_alert_present(page, port, parameter, value):
+    driver = webdriver.Chrome() 
+
+    url = f"http://localhost:{port}/{page}?{parameter}={value}"
+    myLogger.debug(f"Selenium Alert Check in: http://localhost:{port}/{page}?{parameter}={value}")
+
+    driver.get(url)
+    isPresent = True
+
+    try:
+        WebDriverWait(driver, SEC_TO_WAIT).until(EC.alert_is_present())
+        alert = driver.switch_to.alert
+        alert.accept()
+        isPresent = True
+
+    except TimeoutException:
+        isPresent = False
+
+    finally:
+        driver.quit()
+        return isPresent
+
 # ------------------------------ GENERAL ------------------------------ #
 
 @given('the server is working properly')
@@ -59,6 +87,9 @@ def step_server_working(context):
 @when('I send "{value}" as "{parameter}" to "{page}"')
 def step_send_message(context, value, parameter, page):
     try:
+        context.page = page
+        context.parameter = parameter
+        context.value = value
         context.response = send_request(port=context.port, target=page, params={parameter: value}, method="GET")
     except Exception as e:
         assert False, f"Failed to send request: {e}"
@@ -68,10 +99,12 @@ def step_send_message(context, value, parameter, page):
 @then('the page should visualize "{oracle}"')
 def step_page_functional_visualization(context, oracle):
     assert oracle in context.response, f"Expected '{oracle}' to be visualized"
-
+    
 # ------------------------- SECURITY TESTING ------------------------- #
 
 @then('the page should not visualize "{oracle}"')
-def step_page_security_visualization(context, oracle):
-    assert not oracle in context.response, f"Expected '{oracle}' to not be visualized"
-    # if test not passed use also selenium to check that it works also rendering
+def step_page_security_content(context, oracle):
+    if oracle not in context.response:
+        assert True
+    else:
+        assert not is_alert_present(context.page, context.port, context.parameter, context.value)
