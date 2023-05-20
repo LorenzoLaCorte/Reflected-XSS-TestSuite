@@ -62,7 +62,7 @@ def is_alert_present(page, port, parameter, value):
     myLogger.debug(f"Selenium Alert Check in: http://localhost:{port}/{page}?{parameter}={value}")
 
     driver.get(url)
-    isPresent = True
+    isPresent = False
 
     try:
         WebDriverWait(driver, SEC_TO_WAIT).until(EC.alert_is_present())
@@ -105,6 +105,13 @@ def step_page_functional_visualization(context, oracle):
 @then('the page should not visualize "{oracle}"')
 def step_page_security_content(context, oracle):
     if oracle not in context.response:
+        myLogger.debug(f"Alert not in requests response, test passed.")
         assert True
     else:
-        assert not is_alert_present(context.page, context.port, context.parameter, context.value)
+        myLogger.debug(f"Alert in requests response, starting Selenium test.")
+        if not is_alert_present(context.page, context.port, context.parameter, context.value):
+            myLogger.debug(f"Alert not rendered with selenium, test passed.")
+            assert True
+        else:
+            myLogger.debug(f"Alert rendered with selenium, test failed.")
+            assert False

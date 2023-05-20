@@ -13,3 +13,19 @@ Feature: Security Testing
     | echo.php                      | name          | <script>alert(42)</script>     | alert    |
     | echo-name.php                 | name          | <script>alert(42)</script>     | alert    |
     | echo-name-protected.php       | name          | <script>alert(42)</script>     | alert    |
+
+    Examples: Echo with Attribute
+    | page                          | parameter     | value                                      | oracle   |
+    | echo-attr.php                 | name          | ' id=x tabindex=1 onfocus='alert(1)#x      | alert    |
+    | echo-attr2.php                | name          | " id=x tabindex=1 onfocus="alert(1)#x      | alert    |
+
+    Examples: Image Loaders
+    | page                          | parameter     | value                                      | oracle   |
+    | img-loader.php                | target        | ' id=x tabindex=1 onfocus='alert(1)#x      | alert    |
+    | img-loader-protected.php      | target        | ' id=x tabindex=1 onfocus='alert(1)#x      | alert    |
+    | img-loader-protected2.php     | target        | ' id=x tabindex=1 onfocus='alert(1)#x      | alert    |
+
+    Examples: Redirect
+    | page                          | parameter     | value                                      | oracle   |
+    | redirect.php                  | target        | ' id=x tabindex=1 onfocus='alert(1)#x      | alert    |
+    | redirect_protected.php        | target        | ' id=x tabindex=1 onfocus='alert(1)#x      | alert    |

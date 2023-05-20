@@ -26,6 +26,6 @@ Feature: Functional Testing
     | img-loader-protected2.php     | target        | https://tinyurl.com/laxlaxlax      | https://tinyurl.com/laxlaxlax   |
 
     Examples: Redirect
-    | page                          | parameter     | value          | oracle                          |
+    | page                          | parameter     | value          | oracle      |
     | redirect.php                  | target        | google.it      | google.it   |
     | redirect_protected.php        | target        | google.it      | google.it   |
