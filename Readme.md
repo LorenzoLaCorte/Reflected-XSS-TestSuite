@@ -33,6 +33,3 @@ Injection payloads are the combination of:
 - quotes or double quotes to escape HTML base tag,
 - an alert() function (the easiest way to check for an XSS),
 - combinations of listeners and other tags that enable the payload to work without user interaction.
-
-# TO-DO
-- find a way to install php older version (maybe docker container?) to test the other vuln

@@ -2,3 +2,489 @@ format 'the server is working properly' -> 'the server is working properly'
 format 'I send "{value}" as "{parameter}" to "{page}"' -> 'I send "(?P<value>.+?)" as "(?P<parameter>.+?)" to "(?P<page>.+?)"'
 format 'the page should visualize "{oracle}"' -> 'the page should visualize "(?P<oracle>.+?)"'
 format 'the page should not visualize "{oracle}"' -> 'the page should not visualize "(?P<oracle>.+?)"'
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /echo.php?none=none HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/echo.php - With params: {'none': 'none'}
+Result is: Welcome
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /echo-name.php?name=lax HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/echo-name.php - With params: {'name': 'lax'}
+Result is: Welcome lax!
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /echo-name-protected.php?name=lax HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/echo-name-protected.php - With params: {'name': 'lax'}
+Result is: Welcome lax!
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /echo-attr.php?name=test HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/echo-attr.php - With params: {'name': 'test'}
+Result is: <style> .test {  color: blue; } </style>
+
+Welcome <span class='test'>user</span>!
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /echo-attr2.php?name=test HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/echo-attr2.php - With params: {'name': 'test'}
+Result is: <style> .test {  color: blue; } </style>
+
+Welcome <span class="test">user</span>!
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /img-loader.php?target=https%3A%2F%2Ftinyurl.com%2Flaxlaxlax HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/img-loader.php - With params: {'target': 'https://tinyurl.com/laxlaxlax'}
+Result is: <img src='https://tinyurl.com/laxlaxlax'/>
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /img-loader-protected.php?target=https%3A%2F%2Ftinyurl.com%2Flaxlaxlax HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/img-loader-protected.php - With params: {'target': 'https://tinyurl.com/laxlaxlax'}
+Result is: <img src='https://tinyurl.com/laxlaxlax'/>
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /img-loader-protected2.php?target=https%3A%2F%2Ftinyurl.com%2Flaxlaxlax HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/img-loader-protected2.php - With params: {'target': 'https://tinyurl.com/laxlaxlax'}
+Result is: <img src='https://tinyurl.com/laxlaxlax'/>
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /redirect.php?target=google.it HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/redirect.php - With params: {'target': 'google.it'}
+Result is: Click <a href='google.it'>here</a> to redirect
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /redirect_protected.php?target=google.it HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/redirect_protected.php - With params: {'target': 'google.it'}
+Result is: Click <a href='google.it'>here</a> to redirect
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /echo.php?name=%3Cscript%3Ealert%2842%29%3C%2Fscript%3E HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/echo.php - With params: {'name': '<script>alert(42)</script>'}
+Result is: Welcome
+
+Alert not in requests response, test passed.
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /echo-name.php?name=%3Cscript%3Ealert%2842%29%3C%2Fscript%3E HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/echo-name.php - With params: {'name': '<script>alert(42)</script>'}
+Result is: Welcome <script>alert(42)</script>!
+
+Alert in requests response, starting Selenium test.
+Started executable: `/usr/bin/chromedriver` in a child process with pid: 7560
+POST http://localhost:32867/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+Starting new HTTP connection (1): localhost:32867
+http://localhost:32867 "POST /session HTTP/1.1" 200 822
+Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"112.0.5615.165","chrome":{"chromedriverVersion":"111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995})","userDataDir":"/tmp/.com.google.Chrome.QrM1vd"},"goog:chromeOptions":{"debuggerAddress":"localhost:38195"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"linux","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"3b0afb403fb3d950265d4f7766182e86"}} | headers=HTTPHeaderDict({'Content-Length': '822', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Selenium Alert Check in: http://localhost:9005/echo-name.php?name=<script>alert(42)</script>
+POST http://localhost:32867/session/3b0afb403fb3d950265d4f7766182e86/url {"url": "http://localhost:9005/echo-name.php?name=<script>alert(42)</script>"}
+http://localhost:32867 "POST /session/3b0afb403fb3d950265d4f7766182e86/url HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:32867/session/3b0afb403fb3d950265d4f7766182e86/alert/text {}
+http://localhost:32867 "GET /session/3b0afb403fb3d950265d4f7766182e86/alert/text HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":"42"} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:32867/session/3b0afb403fb3d950265d4f7766182e86/alert/text {}
+http://localhost:32867 "GET /session/3b0afb403fb3d950265d4f7766182e86/alert/text HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":"42"} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+POST http://localhost:32867/session/3b0afb403fb3d950265d4f7766182e86/alert/accept {}
+http://localhost:32867 "POST /session/3b0afb403fb3d950265d4f7766182e86/alert/accept HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+DELETE http://localhost:32867/session/3b0afb403fb3d950265d4f7766182e86 {}
+http://localhost:32867 "DELETE /session/3b0afb403fb3d950265d4f7766182e86 HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Alert rendered with selenium, test failed.
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /echo-name-protected.php?name=%3Cscript%3Ealert%2842%29%3C%2Fscript%3E HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/echo-name-protected.php - With params: {'name': '<script>alert(42)</script>'}
+Result is: Welcome &lt;script&gt;alert(42)&lt;/script&gt;!
+
+Alert in requests response, starting Selenium test.
+Started executable: `/usr/bin/chromedriver` in a child process with pid: 7723
+POST http://localhost:59413/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+Starting new HTTP connection (1): localhost:59413
+http://localhost:59413 "POST /session HTTP/1.1" 200 822
+Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"112.0.5615.165","chrome":{"chromedriverVersion":"111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995})","userDataDir":"/tmp/.com.google.Chrome.FpNTwV"},"goog:chromeOptions":{"debuggerAddress":"localhost:43855"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"linux","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"4bfabb78d7ca20b54e04849ce3bac886"}} | headers=HTTPHeaderDict({'Content-Length': '822', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Selenium Alert Check in: http://localhost:9005/echo-name-protected.php?name=<script>alert(42)</script>
+POST http://localhost:59413/session/4bfabb78d7ca20b54e04849ce3bac886/url {"url": "http://localhost:9005/echo-name-protected.php?name=<script>alert(42)</script>"}
+http://localhost:59413 "POST /session/4bfabb78d7ca20b54e04849ce3bac886/url HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:59413/session/4bfabb78d7ca20b54e04849ce3bac886/alert/text {}
+http://localhost:59413 "GET /session/4bfabb78d7ca20b54e04849ce3bac886/alert/text HTTP/1.1" 404 738
+Remote response: status=404 | data={"value":{"error":"no such alert","message":"no such alert\n  (Session info: chrome=112.0.5615.165)","stacktrace":"#0 0x55bfd5a9f243 \u003Cunknown>\n#1 0x55bfd5863631 \u003Cunknown>\n#2 0x55bfd5857991 \u003Cunknown>\n#3 0x55bfd587ac89 \u003Cunknown>\n#4 0x55bfd58c10db \u003Cunknown>\n#5 0x55bfd587aafe \u003Cunknown>\n#6 0x55bfd58c0e53 \u003Cunknown>\n#7 0x55bfd58939ea \u003Cunknown>\n#8 0x55bfd5894b2e \u003Cunknown>\n#9 0x55bfd5af3d5e \u003Cunknown>\n#10 0x55bfd5af7a80 \u003Cunknown>\n#11 0x55bfd5ad98b0 \u003Cunknown>\n#12 0x55bfd5af8b63 \u003Cunknown>\n#13 0x55bfd5acaf75 \u003Cunknown>\n#14 0x55bfd5b1b998 \u003Cunknown>\n#15 0x55bfd5b1bb27 \u003Cunknown>\n#16 0x55bfd5b36c23 \u003Cunknown>\n#17 0x7f780d494b43 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '738', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:59413/session/4bfabb78d7ca20b54e04849ce3bac886/alert/text {}
+http://localhost:59413 "GET /session/4bfabb78d7ca20b54e04849ce3bac886/alert/text HTTP/1.1" 404 738
+Remote response: status=404 | data={"value":{"error":"no such alert","message":"no such alert\n  (Session info: chrome=112.0.5615.165)","stacktrace":"#0 0x55bfd5a9f243 \u003Cunknown>\n#1 0x55bfd5863631 \u003Cunknown>\n#2 0x55bfd5857991 \u003Cunknown>\n#3 0x55bfd587ac89 \u003Cunknown>\n#4 0x55bfd58c10db \u003Cunknown>\n#5 0x55bfd587aafe \u003Cunknown>\n#6 0x55bfd58c0e53 \u003Cunknown>\n#7 0x55bfd58939ea \u003Cunknown>\n#8 0x55bfd5894b2e \u003Cunknown>\n#9 0x55bfd5af3d5e \u003Cunknown>\n#10 0x55bfd5af7a80 \u003Cunknown>\n#11 0x55bfd5ad98b0 \u003Cunknown>\n#12 0x55bfd5af8b63 \u003Cunknown>\n#13 0x55bfd5acaf75 \u003Cunknown>\n#14 0x55bfd5b1b998 \u003Cunknown>\n#15 0x55bfd5b1bb27 \u003Cunknown>\n#16 0x55bfd5b36c23 \u003Cunknown>\n#17 0x7f780d494b43 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '738', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:59413/session/4bfabb78d7ca20b54e04849ce3bac886/alert/text {}
+http://localhost:59413 "GET /session/4bfabb78d7ca20b54e04849ce3bac886/alert/text HTTP/1.1" 404 738
+Remote response: status=404 | data={"value":{"error":"no such alert","message":"no such alert\n  (Session info: chrome=112.0.5615.165)","stacktrace":"#0 0x55bfd5a9f243 \u003Cunknown>\n#1 0x55bfd5863631 \u003Cunknown>\n#2 0x55bfd5857991 \u003Cunknown>\n#3 0x55bfd587ac89 \u003Cunknown>\n#4 0x55bfd58c10db \u003Cunknown>\n#5 0x55bfd587aafe \u003Cunknown>\n#6 0x55bfd58c0e53 \u003Cunknown>\n#7 0x55bfd58939ea \u003Cunknown>\n#8 0x55bfd5894b2e \u003Cunknown>\n#9 0x55bfd5af3d5e \u003Cunknown>\n#10 0x55bfd5af7a80 \u003Cunknown>\n#11 0x55bfd5ad98b0 \u003Cunknown>\n#12 0x55bfd5af8b63 \u003Cunknown>\n#13 0x55bfd5acaf75 \u003Cunknown>\n#14 0x55bfd5b1b998 \u003Cunknown>\n#15 0x55bfd5b1bb27 \u003Cunknown>\n#16 0x55bfd5b36c23 \u003Cunknown>\n#17 0x7f780d494b43 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '738', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:59413/session/4bfabb78d7ca20b54e04849ce3bac886/alert/text {}
+http://localhost:59413 "GET /session/4bfabb78d7ca20b54e04849ce3bac886/alert/text HTTP/1.1" 404 738
+Remote response: status=404 | data={"value":{"error":"no such alert","message":"no such alert\n  (Session info: chrome=112.0.5615.165)","stacktrace":"#0 0x55bfd5a9f243 \u003Cunknown>\n#1 0x55bfd5863631 \u003Cunknown>\n#2 0x55bfd5857991 \u003Cunknown>\n#3 0x55bfd587ac89 \u003Cunknown>\n#4 0x55bfd58c10db \u003Cunknown>\n#5 0x55bfd587aafe \u003Cunknown>\n#6 0x55bfd58c0e53 \u003Cunknown>\n#7 0x55bfd58939ea \u003Cunknown>\n#8 0x55bfd5894b2e \u003Cunknown>\n#9 0x55bfd5af3d5e \u003Cunknown>\n#10 0x55bfd5af7a80 \u003Cunknown>\n#11 0x55bfd5ad98b0 \u003Cunknown>\n#12 0x55bfd5af8b63 \u003Cunknown>\n#13 0x55bfd5acaf75 \u003Cunknown>\n#14 0x55bfd5b1b998 \u003Cunknown>\n#15 0x55bfd5b1bb27 \u003Cunknown>\n#16 0x55bfd5b36c23 \u003Cunknown>\n#17 0x7f780d494b43 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '738', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+DELETE http://localhost:59413/session/4bfabb78d7ca20b54e04849ce3bac886 {}
+http://localhost:59413 "DELETE /session/4bfabb78d7ca20b54e04849ce3bac886 HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Alert not rendered with selenium, test passed.
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /echo-attr.php?name=%27+id%3Dx+tabindex%3D1+onfocus%3D%27alert%281%29%23x HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/echo-attr.php - With params: {'name': "' id=x tabindex=1 onfocus='alert(1)#x"}
+Result is: <style> .test {  color: blue; } </style>
+
+Welcome <span class='' id=x tabindex=1 onfocus='alert(1)#x'>user</span>!
+
+Alert in requests response, starting Selenium test.
+Started executable: `/usr/bin/chromedriver` in a child process with pid: 7935
+POST http://localhost:50993/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+Starting new HTTP connection (1): localhost:50993
+http://localhost:50993 "POST /session HTTP/1.1" 200 822
+Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"112.0.5615.165","chrome":{"chromedriverVersion":"111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995})","userDataDir":"/tmp/.com.google.Chrome.HLpU2z"},"goog:chromeOptions":{"debuggerAddress":"localhost:34693"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"linux","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"4149ca685edca39283d4f7c04388553d"}} | headers=HTTPHeaderDict({'Content-Length': '822', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Selenium Alert Check in: http://localhost:9005/echo-attr.php?name=' id=x tabindex=1 onfocus='alert(1)#x
+POST http://localhost:50993/session/4149ca685edca39283d4f7c04388553d/url {"url": "http://localhost:9005/echo-attr.php?name=' id=x tabindex=1 onfocus='alert(1)#x"}
+http://localhost:50993 "POST /session/4149ca685edca39283d4f7c04388553d/url HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:50993/session/4149ca685edca39283d4f7c04388553d/alert/text {}
+http://localhost:50993 "GET /session/4149ca685edca39283d4f7c04388553d/alert/text HTTP/1.1" 200 13
+Remote response: status=200 | data={"value":"1"} | headers=HTTPHeaderDict({'Content-Length': '13', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:50993/session/4149ca685edca39283d4f7c04388553d/alert/text {}
+http://localhost:50993 "GET /session/4149ca685edca39283d4f7c04388553d/alert/text HTTP/1.1" 200 13
+Remote response: status=200 | data={"value":"1"} | headers=HTTPHeaderDict({'Content-Length': '13', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+POST http://localhost:50993/session/4149ca685edca39283d4f7c04388553d/alert/accept {}
+http://localhost:50993 "POST /session/4149ca685edca39283d4f7c04388553d/alert/accept HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+DELETE http://localhost:50993/session/4149ca685edca39283d4f7c04388553d {}
+http://localhost:50993 "DELETE /session/4149ca685edca39283d4f7c04388553d HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Alert rendered with selenium, test failed.
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /echo-attr2.php?name=%22+id%3Dx+tabindex%3D1+onfocus%3D%22alert%281%29%23x HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/echo-attr2.php - With params: {'name': '" id=x tabindex=1 onfocus="alert(1)#x'}
+Result is: <style> .test {  color: blue; } </style>
+
+Welcome <span class="" id=x tabindex=1 onfocus="alert(1)#x">user</span>!
+
+Alert in requests response, starting Selenium test.
+Started executable: `/usr/bin/chromedriver` in a child process with pid: 8089
+POST http://localhost:41213/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+Starting new HTTP connection (1): localhost:41213
+http://localhost:41213 "POST /session HTTP/1.1" 200 822
+Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"112.0.5615.165","chrome":{"chromedriverVersion":"111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995})","userDataDir":"/tmp/.com.google.Chrome.qebvVn"},"goog:chromeOptions":{"debuggerAddress":"localhost:39947"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"linux","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"ed88e473b1575593b182422b6bd270d7"}} | headers=HTTPHeaderDict({'Content-Length': '822', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Selenium Alert Check in: http://localhost:9005/echo-attr2.php?name=" id=x tabindex=1 onfocus="alert(1)#x
+POST http://localhost:41213/session/ed88e473b1575593b182422b6bd270d7/url {"url": "http://localhost:9005/echo-attr2.php?name=\" id=x tabindex=1 onfocus=\"alert(1)#x"}
+http://localhost:41213 "POST /session/ed88e473b1575593b182422b6bd270d7/url HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:41213/session/ed88e473b1575593b182422b6bd270d7/alert/text {}
+http://localhost:41213 "GET /session/ed88e473b1575593b182422b6bd270d7/alert/text HTTP/1.1" 200 13
+Remote response: status=200 | data={"value":"1"} | headers=HTTPHeaderDict({'Content-Length': '13', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:41213/session/ed88e473b1575593b182422b6bd270d7/alert/text {}
+http://localhost:41213 "GET /session/ed88e473b1575593b182422b6bd270d7/alert/text HTTP/1.1" 200 13
+Remote response: status=200 | data={"value":"1"} | headers=HTTPHeaderDict({'Content-Length': '13', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+POST http://localhost:41213/session/ed88e473b1575593b182422b6bd270d7/alert/accept {}
+http://localhost:41213 "POST /session/ed88e473b1575593b182422b6bd270d7/alert/accept HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+DELETE http://localhost:41213/session/ed88e473b1575593b182422b6bd270d7 {}
+http://localhost:41213 "DELETE /session/ed88e473b1575593b182422b6bd270d7 HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Alert rendered with selenium, test failed.
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /img-loader.php?target=%27+id%3Dx+tabindex%3D1+onfocus%3D%27alert%281%29%23x HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/img-loader.php - With params: {'target': "' id=x tabindex=1 onfocus='alert(1)#x"}
+Result is: <img src='' id=x tabindex=1 onfocus='alert(1)#x'/>
+
+Alert in requests response, starting Selenium test.
+Started executable: `/usr/bin/chromedriver` in a child process with pid: 8241
+POST http://localhost:38461/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+Starting new HTTP connection (1): localhost:38461
+http://localhost:38461 "POST /session HTTP/1.1" 200 822
+Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"112.0.5615.165","chrome":{"chromedriverVersion":"111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995})","userDataDir":"/tmp/.com.google.Chrome.TsfMly"},"goog:chromeOptions":{"debuggerAddress":"localhost:34515"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"linux","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"46d88068f4ab9cbdc2248d63e4d73887"}} | headers=HTTPHeaderDict({'Content-Length': '822', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Selenium Alert Check in: http://localhost:9005/img-loader.php?target=' id=x tabindex=1 onfocus='alert(1)#x
+POST http://localhost:38461/session/46d88068f4ab9cbdc2248d63e4d73887/url {"url": "http://localhost:9005/img-loader.php?target=' id=x tabindex=1 onfocus='alert(1)#x"}
+http://localhost:38461 "POST /session/46d88068f4ab9cbdc2248d63e4d73887/url HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:38461/session/46d88068f4ab9cbdc2248d63e4d73887/alert/text {}
+http://localhost:38461 "GET /session/46d88068f4ab9cbdc2248d63e4d73887/alert/text HTTP/1.1" 200 13
+Remote response: status=200 | data={"value":"1"} | headers=HTTPHeaderDict({'Content-Length': '13', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:38461/session/46d88068f4ab9cbdc2248d63e4d73887/alert/text {}
+http://localhost:38461 "GET /session/46d88068f4ab9cbdc2248d63e4d73887/alert/text HTTP/1.1" 200 13
+Remote response: status=200 | data={"value":"1"} | headers=HTTPHeaderDict({'Content-Length': '13', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+POST http://localhost:38461/session/46d88068f4ab9cbdc2248d63e4d73887/alert/accept {}
+http://localhost:38461 "POST /session/46d88068f4ab9cbdc2248d63e4d73887/alert/accept HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+DELETE http://localhost:38461/session/46d88068f4ab9cbdc2248d63e4d73887 {}
+http://localhost:38461 "DELETE /session/46d88068f4ab9cbdc2248d63e4d73887 HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Alert rendered with selenium, test failed.
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /img-loader-protected.php?target=%27+id%3Dx+tabindex%3D1+onfocus%3D%27alert%281%29%23x HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/img-loader-protected.php - With params: {'target': "' id=x tabindex=1 onfocus='alert(1)#x"}
+Result is: <img src='&#039; id=x tabindex=1 onfocus=&#039;alert(1)#x'/>
+
+Alert in requests response, starting Selenium test.
+Started executable: `/usr/bin/chromedriver` in a child process with pid: 8390
+POST http://localhost:52459/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+Starting new HTTP connection (1): localhost:52459
+http://localhost:52459 "POST /session HTTP/1.1" 200 822
+Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"112.0.5615.165","chrome":{"chromedriverVersion":"111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995})","userDataDir":"/tmp/.com.google.Chrome.vyzGA8"},"goog:chromeOptions":{"debuggerAddress":"localhost:45099"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"linux","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"9842bd8b7703ce6273249772e4231702"}} | headers=HTTPHeaderDict({'Content-Length': '822', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Selenium Alert Check in: http://localhost:9005/img-loader-protected.php?target=' id=x tabindex=1 onfocus='alert(1)#x
+POST http://localhost:52459/session/9842bd8b7703ce6273249772e4231702/url {"url": "http://localhost:9005/img-loader-protected.php?target=' id=x tabindex=1 onfocus='alert(1)#x"}
+http://localhost:52459 "POST /session/9842bd8b7703ce6273249772e4231702/url HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:52459/session/9842bd8b7703ce6273249772e4231702/alert/text {}
+http://localhost:52459 "GET /session/9842bd8b7703ce6273249772e4231702/alert/text HTTP/1.1" 404 738
+Remote response: status=404 | data={"value":{"error":"no such alert","message":"no such alert\n  (Session info: chrome=112.0.5615.165)","stacktrace":"#0 0x5558a712c243 \u003Cunknown>\n#1 0x5558a6ef0631 \u003Cunknown>\n#2 0x5558a6ee4991 \u003Cunknown>\n#3 0x5558a6f07c89 \u003Cunknown>\n#4 0x5558a6f4e0db \u003Cunknown>\n#5 0x5558a6f07afe \u003Cunknown>\n#6 0x5558a6f4de53 \u003Cunknown>\n#7 0x5558a6f209ea \u003Cunknown>\n#8 0x5558a6f21b2e \u003Cunknown>\n#9 0x5558a7180d5e \u003Cunknown>\n#10 0x5558a7184a80 \u003Cunknown>\n#11 0x5558a71668b0 \u003Cunknown>\n#12 0x5558a7185b63 \u003Cunknown>\n#13 0x5558a7157f75 \u003Cunknown>\n#14 0x5558a71a8998 \u003Cunknown>\n#15 0x5558a71a8b27 \u003Cunknown>\n#16 0x5558a71c3c23 \u003Cunknown>\n#17 0x7fd62c094b43 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '738', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:52459/session/9842bd8b7703ce6273249772e4231702/alert/text {}
+http://localhost:52459 "GET /session/9842bd8b7703ce6273249772e4231702/alert/text HTTP/1.1" 404 738
+Remote response: status=404 | data={"value":{"error":"no such alert","message":"no such alert\n  (Session info: chrome=112.0.5615.165)","stacktrace":"#0 0x5558a712c243 \u003Cunknown>\n#1 0x5558a6ef0631 \u003Cunknown>\n#2 0x5558a6ee4991 \u003Cunknown>\n#3 0x5558a6f07c89 \u003Cunknown>\n#4 0x5558a6f4e0db \u003Cunknown>\n#5 0x5558a6f07afe \u003Cunknown>\n#6 0x5558a6f4de53 \u003Cunknown>\n#7 0x5558a6f209ea \u003Cunknown>\n#8 0x5558a6f21b2e \u003Cunknown>\n#9 0x5558a7180d5e \u003Cunknown>\n#10 0x5558a7184a80 \u003Cunknown>\n#11 0x5558a71668b0 \u003Cunknown>\n#12 0x5558a7185b63 \u003Cunknown>\n#13 0x5558a7157f75 \u003Cunknown>\n#14 0x5558a71a8998 \u003Cunknown>\n#15 0x5558a71a8b27 \u003Cunknown>\n#16 0x5558a71c3c23 \u003Cunknown>\n#17 0x7fd62c094b43 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '738', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:52459/session/9842bd8b7703ce6273249772e4231702/alert/text {}
+http://localhost:52459 "GET /session/9842bd8b7703ce6273249772e4231702/alert/text HTTP/1.1" 404 738
+Remote response: status=404 | data={"value":{"error":"no such alert","message":"no such alert\n  (Session info: chrome=112.0.5615.165)","stacktrace":"#0 0x5558a712c243 \u003Cunknown>\n#1 0x5558a6ef0631 \u003Cunknown>\n#2 0x5558a6ee4991 \u003Cunknown>\n#3 0x5558a6f07c89 \u003Cunknown>\n#4 0x5558a6f4e0db \u003Cunknown>\n#5 0x5558a6f07afe \u003Cunknown>\n#6 0x5558a6f4de53 \u003Cunknown>\n#7 0x5558a6f209ea \u003Cunknown>\n#8 0x5558a6f21b2e \u003Cunknown>\n#9 0x5558a7180d5e \u003Cunknown>\n#10 0x5558a7184a80 \u003Cunknown>\n#11 0x5558a71668b0 \u003Cunknown>\n#12 0x5558a7185b63 \u003Cunknown>\n#13 0x5558a7157f75 \u003Cunknown>\n#14 0x5558a71a8998 \u003Cunknown>\n#15 0x5558a71a8b27 \u003Cunknown>\n#16 0x5558a71c3c23 \u003Cunknown>\n#17 0x7fd62c094b43 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '738', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:52459/session/9842bd8b7703ce6273249772e4231702/alert/text {}
+http://localhost:52459 "GET /session/9842bd8b7703ce6273249772e4231702/alert/text HTTP/1.1" 404 738
+Remote response: status=404 | data={"value":{"error":"no such alert","message":"no such alert\n  (Session info: chrome=112.0.5615.165)","stacktrace":"#0 0x5558a712c243 \u003Cunknown>\n#1 0x5558a6ef0631 \u003Cunknown>\n#2 0x5558a6ee4991 \u003Cunknown>\n#3 0x5558a6f07c89 \u003Cunknown>\n#4 0x5558a6f4e0db \u003Cunknown>\n#5 0x5558a6f07afe \u003Cunknown>\n#6 0x5558a6f4de53 \u003Cunknown>\n#7 0x5558a6f209ea \u003Cunknown>\n#8 0x5558a6f21b2e \u003Cunknown>\n#9 0x5558a7180d5e \u003Cunknown>\n#10 0x5558a7184a80 \u003Cunknown>\n#11 0x5558a71668b0 \u003Cunknown>\n#12 0x5558a7185b63 \u003Cunknown>\n#13 0x5558a7157f75 \u003Cunknown>\n#14 0x5558a71a8998 \u003Cunknown>\n#15 0x5558a71a8b27 \u003Cunknown>\n#16 0x5558a71c3c23 \u003Cunknown>\n#17 0x7fd62c094b43 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '738', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+DELETE http://localhost:52459/session/9842bd8b7703ce6273249772e4231702 {}
+http://localhost:52459 "DELETE /session/9842bd8b7703ce6273249772e4231702 HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Alert not rendered with selenium, test passed.
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /img-loader-protected2.php?target=%27+id%3Dx+tabindex%3D1+onfocus%3D%27alert%281%29%23x HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/img-loader-protected2.php - With params: {'target': "' id=x tabindex=1 onfocus='alert(1)#x"}
+Result is: <img src='&#039; id=x tabindex=1 onfocus=&#039;alert(1)#x'/>
+
+Alert in requests response, starting Selenium test.
+Started executable: `/usr/bin/chromedriver` in a child process with pid: 8567
+POST http://localhost:33995/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+Starting new HTTP connection (1): localhost:33995
+http://localhost:33995 "POST /session HTTP/1.1" 200 822
+Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"112.0.5615.165","chrome":{"chromedriverVersion":"111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995})","userDataDir":"/tmp/.com.google.Chrome.LxYzsC"},"goog:chromeOptions":{"debuggerAddress":"localhost:34821"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"linux","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"e240a3a9ee1993cf1d88c9bfcb075277"}} | headers=HTTPHeaderDict({'Content-Length': '822', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Selenium Alert Check in: http://localhost:9005/img-loader-protected2.php?target=' id=x tabindex=1 onfocus='alert(1)#x
+POST http://localhost:33995/session/e240a3a9ee1993cf1d88c9bfcb075277/url {"url": "http://localhost:9005/img-loader-protected2.php?target=' id=x tabindex=1 onfocus='alert(1)#x"}
+http://localhost:33995 "POST /session/e240a3a9ee1993cf1d88c9bfcb075277/url HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:33995/session/e240a3a9ee1993cf1d88c9bfcb075277/alert/text {}
+http://localhost:33995 "GET /session/e240a3a9ee1993cf1d88c9bfcb075277/alert/text HTTP/1.1" 404 738
+Remote response: status=404 | data={"value":{"error":"no such alert","message":"no such alert\n  (Session info: chrome=112.0.5615.165)","stacktrace":"#0 0x55fb69bad243 \u003Cunknown>\n#1 0x55fb69971631 \u003Cunknown>\n#2 0x55fb69965991 \u003Cunknown>\n#3 0x55fb69988c89 \u003Cunknown>\n#4 0x55fb699cf0db \u003Cunknown>\n#5 0x55fb69988afe \u003Cunknown>\n#6 0x55fb699cee53 \u003Cunknown>\n#7 0x55fb699a19ea \u003Cunknown>\n#8 0x55fb699a2b2e \u003Cunknown>\n#9 0x55fb69c01d5e \u003Cunknown>\n#10 0x55fb69c05a80 \u003Cunknown>\n#11 0x55fb69be78b0 \u003Cunknown>\n#12 0x55fb69c06b63 \u003Cunknown>\n#13 0x55fb69bd8f75 \u003Cunknown>\n#14 0x55fb69c29998 \u003Cunknown>\n#15 0x55fb69c29b27 \u003Cunknown>\n#16 0x55fb69c44c23 \u003Cunknown>\n#17 0x7f5c21894b43 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '738', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:33995/session/e240a3a9ee1993cf1d88c9bfcb075277/alert/text {}
+http://localhost:33995 "GET /session/e240a3a9ee1993cf1d88c9bfcb075277/alert/text HTTP/1.1" 404 738
+Remote response: status=404 | data={"value":{"error":"no such alert","message":"no such alert\n  (Session info: chrome=112.0.5615.165)","stacktrace":"#0 0x55fb69bad243 \u003Cunknown>\n#1 0x55fb69971631 \u003Cunknown>\n#2 0x55fb69965991 \u003Cunknown>\n#3 0x55fb69988c89 \u003Cunknown>\n#4 0x55fb699cf0db \u003Cunknown>\n#5 0x55fb69988afe \u003Cunknown>\n#6 0x55fb699cee53 \u003Cunknown>\n#7 0x55fb699a19ea \u003Cunknown>\n#8 0x55fb699a2b2e \u003Cunknown>\n#9 0x55fb69c01d5e \u003Cunknown>\n#10 0x55fb69c05a80 \u003Cunknown>\n#11 0x55fb69be78b0 \u003Cunknown>\n#12 0x55fb69c06b63 \u003Cunknown>\n#13 0x55fb69bd8f75 \u003Cunknown>\n#14 0x55fb69c29998 \u003Cunknown>\n#15 0x55fb69c29b27 \u003Cunknown>\n#16 0x55fb69c44c23 \u003Cunknown>\n#17 0x7f5c21894b43 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '738', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:33995/session/e240a3a9ee1993cf1d88c9bfcb075277/alert/text {}
+http://localhost:33995 "GET /session/e240a3a9ee1993cf1d88c9bfcb075277/alert/text HTTP/1.1" 404 738
+Remote response: status=404 | data={"value":{"error":"no such alert","message":"no such alert\n  (Session info: chrome=112.0.5615.165)","stacktrace":"#0 0x55fb69bad243 \u003Cunknown>\n#1 0x55fb69971631 \u003Cunknown>\n#2 0x55fb69965991 \u003Cunknown>\n#3 0x55fb69988c89 \u003Cunknown>\n#4 0x55fb699cf0db \u003Cunknown>\n#5 0x55fb69988afe \u003Cunknown>\n#6 0x55fb699cee53 \u003Cunknown>\n#7 0x55fb699a19ea \u003Cunknown>\n#8 0x55fb699a2b2e \u003Cunknown>\n#9 0x55fb69c01d5e \u003Cunknown>\n#10 0x55fb69c05a80 \u003Cunknown>\n#11 0x55fb69be78b0 \u003Cunknown>\n#12 0x55fb69c06b63 \u003Cunknown>\n#13 0x55fb69bd8f75 \u003Cunknown>\n#14 0x55fb69c29998 \u003Cunknown>\n#15 0x55fb69c29b27 \u003Cunknown>\n#16 0x55fb69c44c23 \u003Cunknown>\n#17 0x7f5c21894b43 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '738', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:33995/session/e240a3a9ee1993cf1d88c9bfcb075277/alert/text {}
+http://localhost:33995 "GET /session/e240a3a9ee1993cf1d88c9bfcb075277/alert/text HTTP/1.1" 404 738
+Remote response: status=404 | data={"value":{"error":"no such alert","message":"no such alert\n  (Session info: chrome=112.0.5615.165)","stacktrace":"#0 0x55fb69bad243 \u003Cunknown>\n#1 0x55fb69971631 \u003Cunknown>\n#2 0x55fb69965991 \u003Cunknown>\n#3 0x55fb69988c89 \u003Cunknown>\n#4 0x55fb699cf0db \u003Cunknown>\n#5 0x55fb69988afe \u003Cunknown>\n#6 0x55fb699cee53 \u003Cunknown>\n#7 0x55fb699a19ea \u003Cunknown>\n#8 0x55fb699a2b2e \u003Cunknown>\n#9 0x55fb69c01d5e \u003Cunknown>\n#10 0x55fb69c05a80 \u003Cunknown>\n#11 0x55fb69be78b0 \u003Cunknown>\n#12 0x55fb69c06b63 \u003Cunknown>\n#13 0x55fb69bd8f75 \u003Cunknown>\n#14 0x55fb69c29998 \u003Cunknown>\n#15 0x55fb69c29b27 \u003Cunknown>\n#16 0x55fb69c44c23 \u003Cunknown>\n#17 0x7f5c21894b43 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '738', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+DELETE http://localhost:33995/session/e240a3a9ee1993cf1d88c9bfcb075277 {}
+http://localhost:33995 "DELETE /session/e240a3a9ee1993cf1d88c9bfcb075277 HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Alert not rendered with selenium, test passed.
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /redirect.php?target=%27+id%3Dx+tabindex%3D1+onfocus%3D%27alert%281%29%23x HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/redirect.php - With params: {'target': "' id=x tabindex=1 onfocus='alert(1)#x"}
+Result is: Click <a href='' id=x tabindex=1 onfocus='alert(1)#x'>here</a> to redirect
+
+Alert in requests response, starting Selenium test.
+Started executable: `/usr/bin/chromedriver` in a child process with pid: 8742
+POST http://localhost:49539/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+Starting new HTTP connection (1): localhost:49539
+http://localhost:49539 "POST /session HTTP/1.1" 200 822
+Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"112.0.5615.165","chrome":{"chromedriverVersion":"111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995})","userDataDir":"/tmp/.com.google.Chrome.8Gw12o"},"goog:chromeOptions":{"debuggerAddress":"localhost:46719"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"linux","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"9d2a7aaa2016ce028d5cc57ac7fc5497"}} | headers=HTTPHeaderDict({'Content-Length': '822', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Selenium Alert Check in: http://localhost:9005/redirect.php?target=' id=x tabindex=1 onfocus='alert(1)#x
+POST http://localhost:49539/session/9d2a7aaa2016ce028d5cc57ac7fc5497/url {"url": "http://localhost:9005/redirect.php?target=' id=x tabindex=1 onfocus='alert(1)#x"}
+http://localhost:49539 "POST /session/9d2a7aaa2016ce028d5cc57ac7fc5497/url HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:49539/session/9d2a7aaa2016ce028d5cc57ac7fc5497/alert/text {}
+http://localhost:49539 "GET /session/9d2a7aaa2016ce028d5cc57ac7fc5497/alert/text HTTP/1.1" 200 13
+Remote response: status=200 | data={"value":"1"} | headers=HTTPHeaderDict({'Content-Length': '13', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:49539/session/9d2a7aaa2016ce028d5cc57ac7fc5497/alert/text {}
+http://localhost:49539 "GET /session/9d2a7aaa2016ce028d5cc57ac7fc5497/alert/text HTTP/1.1" 200 13
+Remote response: status=200 | data={"value":"1"} | headers=HTTPHeaderDict({'Content-Length': '13', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+POST http://localhost:49539/session/9d2a7aaa2016ce028d5cc57ac7fc5497/alert/accept {}
+http://localhost:49539 "POST /session/9d2a7aaa2016ce028d5cc57ac7fc5497/alert/accept HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+DELETE http://localhost:49539/session/9d2a7aaa2016ce028d5cc57ac7fc5497 {}
+http://localhost:49539 "DELETE /session/9d2a7aaa2016ce028d5cc57ac7fc5497 HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Alert rendered with selenium, test failed.
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /index.php HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/index.php - With params: None
+Result is: Server is working properly
+
+Starting new HTTP connection (1): localhost:9005
+http://localhost:9005 "GET /redirect_protected.php?target=%27+id%3Dx+tabindex%3D1+onfocus%3D%27alert%281%29%23x HTTP/1.1" 200 None
+Sending request to: http://localhost:9005/redirect_protected.php - With params: {'target': "' id=x tabindex=1 onfocus='alert(1)#x"}
+Result is: Click <a href='&#039; id=x tabindex=1 onfocus=&#039;alert(1)#x'>here</a> to redirect
+
+Alert in requests response, starting Selenium test.
+Started executable: `/usr/bin/chromedriver` in a child process with pid: 8912
+POST http://localhost:40345/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}
+Starting new HTTP connection (1): localhost:40345
+http://localhost:40345 "POST /session HTTP/1.1" 200 822
+Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"112.0.5615.165","chrome":{"chromedriverVersion":"111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995})","userDataDir":"/tmp/.com.google.Chrome.qRAJmU"},"goog:chromeOptions":{"debuggerAddress":"localhost:43627"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"linux","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"5d399ffa1e1f11767403f1a41cf0d0d9"}} | headers=HTTPHeaderDict({'Content-Length': '822', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Selenium Alert Check in: http://localhost:9005/redirect_protected.php?target=' id=x tabindex=1 onfocus='alert(1)#x
+POST http://localhost:40345/session/5d399ffa1e1f11767403f1a41cf0d0d9/url {"url": "http://localhost:9005/redirect_protected.php?target=' id=x tabindex=1 onfocus='alert(1)#x"}
+http://localhost:40345 "POST /session/5d399ffa1e1f11767403f1a41cf0d0d9/url HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:40345/session/5d399ffa1e1f11767403f1a41cf0d0d9/alert/text {}
+http://localhost:40345 "GET /session/5d399ffa1e1f11767403f1a41cf0d0d9/alert/text HTTP/1.1" 404 738
+Remote response: status=404 | data={"value":{"error":"no such alert","message":"no such alert\n  (Session info: chrome=112.0.5615.165)","stacktrace":"#0 0x55d21e208243 \u003Cunknown>\n#1 0x55d21dfcc631 \u003Cunknown>\n#2 0x55d21dfc0991 \u003Cunknown>\n#3 0x55d21dfe3c89 \u003Cunknown>\n#4 0x55d21e02a0db \u003Cunknown>\n#5 0x55d21dfe3afe \u003Cunknown>\n#6 0x55d21e029e53 \u003Cunknown>\n#7 0x55d21dffc9ea \u003Cunknown>\n#8 0x55d21dffdb2e \u003Cunknown>\n#9 0x55d21e25cd5e \u003Cunknown>\n#10 0x55d21e260a80 \u003Cunknown>\n#11 0x55d21e2428b0 \u003Cunknown>\n#12 0x55d21e261b63 \u003Cunknown>\n#13 0x55d21e233f75 \u003Cunknown>\n#14 0x55d21e284998 \u003Cunknown>\n#15 0x55d21e284b27 \u003Cunknown>\n#16 0x55d21e29fc23 \u003Cunknown>\n#17 0x7fe1f7894b43 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '738', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:40345/session/5d399ffa1e1f11767403f1a41cf0d0d9/alert/text {}
+http://localhost:40345 "GET /session/5d399ffa1e1f11767403f1a41cf0d0d9/alert/text HTTP/1.1" 404 738
+Remote response: status=404 | data={"value":{"error":"no such alert","message":"no such alert\n  (Session info: chrome=112.0.5615.165)","stacktrace":"#0 0x55d21e208243 \u003Cunknown>\n#1 0x55d21dfcc631 \u003Cunknown>\n#2 0x55d21dfc0991 \u003Cunknown>\n#3 0x55d21dfe3c89 \u003Cunknown>\n#4 0x55d21e02a0db \u003Cunknown>\n#5 0x55d21dfe3afe \u003Cunknown>\n#6 0x55d21e029e53 \u003Cunknown>\n#7 0x55d21dffc9ea \u003Cunknown>\n#8 0x55d21dffdb2e \u003Cunknown>\n#9 0x55d21e25cd5e \u003Cunknown>\n#10 0x55d21e260a80 \u003Cunknown>\n#11 0x55d21e2428b0 \u003Cunknown>\n#12 0x55d21e261b63 \u003Cunknown>\n#13 0x55d21e233f75 \u003Cunknown>\n#14 0x55d21e284998 \u003Cunknown>\n#15 0x55d21e284b27 \u003Cunknown>\n#16 0x55d21e29fc23 \u003Cunknown>\n#17 0x7fe1f7894b43 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '738', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:40345/session/5d399ffa1e1f11767403f1a41cf0d0d9/alert/text {}
+http://localhost:40345 "GET /session/5d399ffa1e1f11767403f1a41cf0d0d9/alert/text HTTP/1.1" 404 738
+Remote response: status=404 | data={"value":{"error":"no such alert","message":"no such alert\n  (Session info: chrome=112.0.5615.165)","stacktrace":"#0 0x55d21e208243 \u003Cunknown>\n#1 0x55d21dfcc631 \u003Cunknown>\n#2 0x55d21dfc0991 \u003Cunknown>\n#3 0x55d21dfe3c89 \u003Cunknown>\n#4 0x55d21e02a0db \u003Cunknown>\n#5 0x55d21dfe3afe \u003Cunknown>\n#6 0x55d21e029e53 \u003Cunknown>\n#7 0x55d21dffc9ea \u003Cunknown>\n#8 0x55d21dffdb2e \u003Cunknown>\n#9 0x55d21e25cd5e \u003Cunknown>\n#10 0x55d21e260a80 \u003Cunknown>\n#11 0x55d21e2428b0 \u003Cunknown>\n#12 0x55d21e261b63 \u003Cunknown>\n#13 0x55d21e233f75 \u003Cunknown>\n#14 0x55d21e284998 \u003Cunknown>\n#15 0x55d21e284b27 \u003Cunknown>\n#16 0x55d21e29fc23 \u003Cunknown>\n#17 0x7fe1f7894b43 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '738', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+GET http://localhost:40345/session/5d399ffa1e1f11767403f1a41cf0d0d9/alert/text {}
+http://localhost:40345 "GET /session/5d399ffa1e1f11767403f1a41cf0d0d9/alert/text HTTP/1.1" 404 738
+Remote response: status=404 | data={"value":{"error":"no such alert","message":"no such alert\n  (Session info: chrome=112.0.5615.165)","stacktrace":"#0 0x55d21e208243 \u003Cunknown>\n#1 0x55d21dfcc631 \u003Cunknown>\n#2 0x55d21dfc0991 \u003Cunknown>\n#3 0x55d21dfe3c89 \u003Cunknown>\n#4 0x55d21e02a0db \u003Cunknown>\n#5 0x55d21dfe3afe \u003Cunknown>\n#6 0x55d21e029e53 \u003Cunknown>\n#7 0x55d21dffc9ea \u003Cunknown>\n#8 0x55d21dffdb2e \u003Cunknown>\n#9 0x55d21e25cd5e \u003Cunknown>\n#10 0x55d21e260a80 \u003Cunknown>\n#11 0x55d21e2428b0 \u003Cunknown>\n#12 0x55d21e261b63 \u003Cunknown>\n#13 0x55d21e233f75 \u003Cunknown>\n#14 0x55d21e284998 \u003Cunknown>\n#15 0x55d21e284b27 \u003Cunknown>\n#16 0x55d21e29fc23 \u003Cunknown>\n#17 0x7fe1f7894b43 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '738', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+DELETE http://localhost:40345/session/5d399ffa1e1f11767403f1a41cf0d0d9 {}
+http://localhost:40345 "DELETE /session/5d399ffa1e1f11767403f1a41cf0d0d9 HTTP/1.1" 200 14
+Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+Finished Request
+Alert not rendered with selenium, test passed.
